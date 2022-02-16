@@ -66,16 +66,15 @@ def check_location_is_safe(arr, row, col, num):
 def solve_sudoku(arr):
 	# Lista que lleva la fila y columna actual
 	l =[0, 0]
-	
+	global n
 	# Se chequea si la ubicacion actual esta vacia "0"
 	if(not find_empty_location(arr, l)):
 		return True
 	
 	# Se obtiene la fila y columna a utilizar
 	row, col = l
-	
-	# Se obtienen los numeros del 1 al 9
-	for num in range(1, 10):
+	# Se obtienen los numeros del 1 a n-1 
+	for num in range(1, int(n) + 1):
 		
 		# if looks promising
 		if(check_location_is_safe(arr,
@@ -97,7 +96,7 @@ def solve_sudoku(arr):
 
 
 
-read_file("file.txt")
+read_file("ninexnine.txt")
 if(solve_sudoku(sudoku)):
   print("La solucion para el sudoku es")
   print(sudoku)
