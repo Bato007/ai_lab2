@@ -22,6 +22,12 @@ def read_file(filename):
     if (int(n) % 2 == 0):
       boxSize = 2
 
+# Referencia codigo:
+# Autores varios
+# 12 - 1 - 2022
+# Adaptado para funcionalidad con 4x4 y 6x6
+#
+# https://www.geeksforgeeks.org/sudoku-backtracking-7/
 
 # Se encuentra el siguiente espacio vacio
 def find_empty_location(arr, l):
@@ -95,8 +101,9 @@ def solve_sudoku(arr):
 	return False
 
 
-
-read_file("ninexnine.txt")
+fileNum = input("Ingrese el numero del sudoku a resolver:\n1. 4x4\n2. 6x6\n3. 9x9\n")
+fileName = "fourxfour.txt" if fileNum == "1" else "sixxsix.txt" if fileNum == "2" else "ninexnine.txt"
+read_file(fileName)
 if(solve_sudoku(sudoku)):
   print("La solucion para el sudoku es")
   print(sudoku)
