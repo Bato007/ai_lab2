@@ -1,4 +1,9 @@
 import sys
+'''
+  Referencias utilizadas:
+  https://www.geeksforgeeks.org/printing-paths-dijkstras-shortest-path-algorithm/
+'''
+
 # Obtener el path del grafo y lo convierte
 # a un array [[v11, v12, w], ..., [vm1, vm2, wm]]
 def read_document(path):
