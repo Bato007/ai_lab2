@@ -10,10 +10,10 @@ def read_file(filename):
     if index == 0:
       n = line
       n.rstrip("\n")
+      sudoku = [[0 for i in range(int(n))] for j in range(int(n))]
     elif index == 1:
       m = line
       m.rstrip("\n")
-      sudoku = [[0 for i in range(int(n))] for j in range(int(m))]
     else:
       values = line.split(" ")
       if not values == None:
